@@ -1,0 +1,48 @@
+[tools]
+bun = "latest"
+
+[tasks.install]
+description = "Install all dependencies"
+run = "bun install"
+
+[tasks.build]
+description = "Build all packages"
+depends = ["build:shared", "build:db", "build:api", "build:ext"]
+
+[tasks."build:shared"]
+description = "Build shared package"
+run = "bun run --cwd packages/shared build"
+
+[tasks."build:db"]
+description = "Build db package"
+depends = ["build:shared"]
+run = "bun run --cwd packages/db build"
+
+[tasks."build:api"]
+description = "Build api package"
+depends = ["build:db"]
+run = "bun run --cwd packages/api build"
+
+[tasks."build:ext"]
+description = "Build browser extension (Chrome + Firefox)"
+run = "cd packages/extension && bunx wxt build && bunx wxt build --browser firefox"
+
+[tasks.typecheck]
+description = "TypeScript check across monorepo"
+run = "bunx tsc --build"
+
+[tasks."db:generate"]
+description = "Generate Drizzle migrations"
+run = "cd packages/db && bunx drizzle-kit generate"
+
+[tasks."db:push"]
+description = "Push schema to local D1 (dev)"
+run = "cd packages/db && bunx drizzle-kit push"
+
+[tasks.dev]
+description = "Run wrangler dev server"
+run = "bun run --cwd packages/api dev"
+
+[tasks."deploy:dry"]
+description = "Dry-run deploy to Cloudflare"
+run = "cd packages/api && bunx wrangler deploy --dry-run"

@@ -1,0 +1,10 @@
+{
+  "name": "trove",
+  "private": true,
+  "workspaces": [
+    "packages/shared",
+    "packages/db",
+    "packages/api",
+    "packages/extension"
+  ]
+}

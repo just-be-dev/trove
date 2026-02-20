@@ -1,0 +1,19 @@
+{
+  "name": "@trove/api",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "wrangler dev"
+  },
+  "dependencies": {
+    "@trove/shared": "workspace:*",
+    "@trove/db": "workspace:*",
+    "hono": "^4.7.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250109.0",
+    "typescript": "^5.7.0",
+    "wrangler": "^3.105.0"
+  }
+}

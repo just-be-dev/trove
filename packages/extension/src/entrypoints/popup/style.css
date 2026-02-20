@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 320px;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+#app {
+  padding: 16px;
+}
+
+header {
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #555;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 8px 10px;
+  font-size: 13px;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+input:focus {
+  border-color: #4a90d9;
+}
+
+button {
+  cursor: pointer;
+}
+
+#save-btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background: #2563eb;
+  border: none;
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+
+#save-btn:hover {
+  background: #1d4ed8;
+}
+
+#save-btn:disabled {
+  background: #93b4f5;
+  cursor: not-allowed;
+}
+
+#save-settings-btn {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  background: #16a34a;
+  border: none;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+
+#save-settings-btn:hover {
+  background: #15803d;
+}
+
+.status {
+  margin-top: 8px;
+  padding: 8px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  line-height: 1.4;
+}
+
+.status.success {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.status.error {
+  color: #991b1b;
+  background: #fee2e2;
+}
+
+footer {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.link-btn {
+  font-size: 12px;
+  color: #6b7280;
+  background: none;
+  border: none;
+  text-decoration: underline;
+}
+
+.link-btn:hover {
+  color: #374151;
+}
+
+[hidden] {
+  display: none !important;
+}

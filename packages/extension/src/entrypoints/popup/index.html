@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trove</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>Trove</h1>
+      </header>
+
+      <!-- Main view: save button -->
+      <section id="main-view">
+        <button id="save-btn" type="button">Save This Page</button>
+        <p id="status" class="status" hidden></p>
+      </section>
+
+      <!-- Settings view -->
+      <section id="settings-view" hidden>
+        <label>
+          API URL
+          <input id="api-url" type="url" placeholder="https://your-worker.workers.dev" />
+        </label>
+        <label>
+          API Key
+          <input id="api-key" type="password" placeholder="Your API key" />
+        </label>
+        <button id="save-settings-btn" type="button">Save Settings</button>
+        <p id="settings-status" class="status" hidden></p>
+      </section>
+
+      <footer>
+        <button id="toggle-settings" type="button" class="link-btn">Settings</button>
+      </footer>
+    </div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
